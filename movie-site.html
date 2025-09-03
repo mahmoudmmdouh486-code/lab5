@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>موقع أفلام</title>
+  <link rel="stylesheet" href="movie-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#" class="active">الرئيسية</a></li>
+        <li><a href="#">الأصناف</a></li>
+        <li><a href="#">الدول</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="ابحث عن فيلم أو مسلسل..." />
+        <button aria-label="بحث"><svg xmlns="http://www.w3.org/2000/svg" fill="white" height="20" viewBox="0 0 24 24" width="20"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM10 14a4 4 0 110-8 4 4 0 010 8z"/></svg></button>
+      </div>
+      <ul class="nav-links right-links">
+        <li><a href="#">أفلام</a></li>
+        <li><a href="#">مسلسلات</a></li>
+        <li><a href="#">أنمي</a></li>
+        <li><a href="#">تسجيل الدخول</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image: url('https://image.tmdb.org/t/p/original//t6HIqrRAclMCA60NsSmeqe9RmNV.jpg');">
+      <div class="hero-content">
+        <h1>Avatar: The Way of Water</h1>
+        <div class="categories">
+          <span>أكشن</span>
+          <span>مغامرة</span>
+          <span>خيال علمي</span>
+        </div>
+        <div class="details">
+          <span>2022</span>
+          <span>3:12:00</span>
+          <span>8.5 ★</span>
+        </div>
+        <p class="description">
+          بعد مرور أكثر من عقد على أحداث الفيلم الأول، تتابع قصة عائلة سولّي (جيك، نيتيري، وأطفالهم)، والتحديات التي تواجههم في سبيل البقاء على قيد الحياة.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn watch-now">شاهد الآن ▶</button>
+          <button class="btn watch-later">شاهد لاحقاً ⏰</button>
+        </div>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="recently-updated">
+      <h2>تم التحديث مؤخراً</h2>
+      <div class="movie-list">
+        <div class="movie-item">
+<img src="figma/The Flash.webp" alt="The Flash" />
+          <div class="movie-info">
+            <h3>The Flash</h3>
+            <p>مسلسل / الموسم 2 / الحلقة 9</p>
+            <p>11/05/23</p>
+          </div>
+        </div>
+        <div class="movie-item">
+<img src="figma/Fubar.jpeg" alt="Fubar" />
+          <div class="movie-info">
+            <h3>Fubar</h3>
+            <p>مسلسل / الموسم 1 / الحلقة 8</p>
+            <p>11/05/23</p>
+          </div>
+        </div>
+        <div class="movie-item">
+<img src="figma/Manifest.jpeg" alt="Manifest" />
+          <div class="movie-info">
+            <h3>Manifest</h3>
+            <p>مسلسل / الموسم 4 / الحلقة 12</p>
+            <p>11/05/23</p>
+          </div>
+        </div>
+        <div class="movie-item">
+<img src="figma/Silo.jpeg" alt="Silo" />
+          <div class="movie-info">
+            <h3>Silo</h3>
+            <p>مسلسل / الموسم 1 / الحلقة 10</p>
+            <p>11/05/23</p>
+          </div>
+        </div>
+      </div>
+      <button class="scroll-button">&#8594;</button>
+    </section>
+
+    <section class="trending">
+      <h2>الأكثر مشاهدة</h2>
+      <div class="movie-list trending-list">
+        <div class="movie-item trending-item">
+<img src="figma/placeholder.png" alt="Medellin" />
+          <div class="movie-info">
+            <h3>Medellin</h3>
+            <div class="tags">
+              <span>أكشن</span>
+              <span>كوميدي</span>
+            </div>
+          </div>
+          <div class="duration-rating">
+            <span>3:12:00</span>
+            <span>8.0 ★</span>
+          </div>
+          <button class="btn play-button">&#9658;</button>
+        </div>
+        <div class="movie-item trending-item">
+<img src="figma/placeholder.png" alt="Fast X" />
+          <div class="movie-info">
+            <h3>Fast X</h3>
+            <div class="tags">
+              <span>أكشن</span>
+              <span>جريمة</span>
+              <span>إثارة</span>
+            </div>
+          </div>
+          <div class="duration-rating">
+            <span>3:12:00</span>
+            <span>8.0 ★</span>
+          </div>
+          <button class="btn play-button">&#9658;</button>
+        </div>
+        <div class="movie-item trending-item">
+<img src="figma/placeholder.png" alt="The Black Demon" />
+          <div class="movie-info">
+            <h3>The Black Demon</h3>
+            <div class="tags">
+              <span>رعب</span>
+              <span>إثارة</span>
+            </div>
+          </div>
+          <div class="duration-rating">
+            <span>3:12:00</span>
+            <span>8.0 ★</span>
+          </div>
+          <button class="btn play-button">&#9658;</button>
+        </div>
+      </div>
+      <a href="#" class="view-all">عرض الكل &#8594;</a>
+    </section>
+  </main>
+</body>
+</html>

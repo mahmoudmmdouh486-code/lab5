@@ -1,0 +1,386 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  direction: rtl;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.right-links {
+  gap: 15px;
+}
+
+/* Search bar */
+.search-bar {
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 40px 8px 15px;
+  border-radius: 20px;
+  border: none;
+  font-size: 14px;
+  background-color: #222;
+  color: #fff;
+}
+
+.search-bar input::placeholder {
+  color: #bbb;
+}
+
+.search-bar button {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  fill: #fff;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px 80px 40px;
+  display: flex;
+  align-items: flex-start;
+  min-height: 500px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0.9) 20%, transparent 80%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.categories span {
+  background-color: #222;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 8px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.details {
+  display: flex;
+  gap: 15px;
+  font-size: 13px;
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 25px;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 25px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.watch-now {
+  background-color: #e50914;
+  color: #fff;
+}
+
+.watch-now:hover {
+  background-color: #b0070f;
+}
+
+.watch-later {
+  background-color: transparent;
+  border: 2px solid #e50914;
+  color: #e50914;
+}
+
+.watch-later:hover {
+  background-color: #e50914;
+  color: #fff;
+}
+
+/* Slider dots */
+.slider-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #555;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #e50914;
+}
+
+/* Sections */
+section {
+  padding: 30px 40px;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Movie lists */
+.movie-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.movie-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.movie-item {
+  background-color: #111;
+  border-radius: 8px;
+  min-width: 180px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.movie-item img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #222;
+}
+
+.movie-info {
+  padding: 10px 12px;
+  color: #ddd;
+}
+
+.movie-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.movie-info p {
+  font-size: 12px;
+  color: #bbb;
+  margin-bottom: 3px;
+}
+
+/* Scroll button for recently updated */
+.scroll-button {
+  background-color: transparent;
+  border: 2px solid #555;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  align-self: center;
+  margin-left: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  border-color: #e50914;
+  color: #e50914;
+}
+
+/* Trending section */
+.trending-list {
+  gap: 15px;
+}
+
+.trending-item {
+  min-width: 220px;
+  position: relative;
+  background-color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.trending-item:hover {
+  transform: scale(1.05);
+}
+
+.trending-item img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #222;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+}
+
+.tags span {
+  background-color: #e50914;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.duration-rating {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px 10px 12px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+  background-color: #b0070f;
+}
+
+/* View all link */
+.view-all {
+  color: #e50914;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  float: left;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.view-all:hover {
+  color: #b0070f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .movie-list {
+    gap: 15px;
+  }
+
+  .trending-item {
+    min-width: 180px;
+  }
+}
